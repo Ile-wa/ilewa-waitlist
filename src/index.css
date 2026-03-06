@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-brand-blue: #5a7ddc;
+  --color-brand-blue-bg: #eaeefb;
+
+  /* Text Colors */
+  --color-text-primary: #414141;
+  --color-text-secondary: #7e7e7e;
+  --color-text-muted: #9c9c9c;
+  --color-text-muted-light: #cacaca;
+
+  /* Backgrounds */
+  --color-bg-page: #f9fafb;
+
+  /* Borders */
+  --color-border-light: #e4e4e4;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+}
+
+button {
+  cursor: pointer;
+}
+
+select,
+input,
+textarea {
+  font-family: inherit;
+}
