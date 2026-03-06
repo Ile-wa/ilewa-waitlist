@@ -14,8 +14,13 @@ const publicApi = axios.create({
 
 // ─── Waitlist Form ────────────────────────────────────────────────────────
 export const submitWaitlistForm = async ({ full_name, email, role_interest }) => {
+  const parts = full_name.trim().split(/\s+/);
+  const first_name = parts[0] || '';
+  const last_name = parts.slice(1).join(' ') || '';
+
   const response = await publicApi.post('/anu/public/signup/', {
-    full_name,
+    first_name,
+    last_name,
     email,
     role_interest,
   });
