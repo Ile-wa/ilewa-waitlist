@@ -112,28 +112,28 @@ const PublicFooter = ({ hideCta = false }) => {
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 href="#"
-                className="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors text-white/70 hover:text-white"
+                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors text-white/70 hover:text-white"
               >
                 <Facebook className="w-4 h-4" />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 href="#"
-                className="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors text-white/70 hover:text-white"
+                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors text-white/70 hover:text-white"
               >
                 <Instagram className="w-4 h-4" />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 href="#"
-                className="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors text-white/70 hover:text-white"
+                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors text-white/70 hover:text-white"
               >
                 <Twitter className="w-4 h-4" />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 href="#"
-                className="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors text-white/70 hover:text-white"
+                className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors text-white/70 hover:text-white"
               >
                 <Linkedin className="w-4 h-4" />
               </motion.a>

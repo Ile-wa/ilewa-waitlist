@@ -36,20 +36,18 @@ export default function CookieConsent() {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6">
+    <div className="fixed bottom-0 left-0 right-0 z-[9999] p-2 md:p-6">
       <div className="max-w-2xl mx-auto bg-white rounded-[8px] shadow-2xl border border-border-light overflow-hidden">
-        <div className="p-4 md:p-5">
+        <div className="p-3 md:p-5">
           {/* Header */}
-          <div className="flex items-start gap-3 mb-3">
-            <Cookie className="w-5 h-5 text-brand-blue shrink-0 mt-0.5" />
-            <div className="flex-1">
-              <p className="text-sm text-text-primary leading-relaxed">
-                We use cookies to improve your experience. By continuing, you consent to our use of cookies per our{' '}
-                <a href="#" className="text-brand-blue underline hover:text-[#4a6dcc]">
-                  Privacy Policy
-                </a>.
-              </p>
-            </div>
+          <div className="flex items-center gap-2 md:gap-3 md:items-start md:mb-3">
+            <Cookie className="w-4 h-4 md:w-5 md:h-5 text-brand-blue shrink-0" />
+            <p className="flex-1 text-xs md:text-sm text-text-primary leading-snug md:leading-relaxed">
+              We use cookies to improve your experience.{' '}
+              <a href="#" className="text-brand-blue underline hover:text-[#4a6dcc]">
+                Privacy Policy
+              </a>
+            </p>
             <button
               onClick={handleRejectNonEssential}
               className="text-text-muted hover:text-text-secondary shrink-0"
@@ -61,7 +59,7 @@ export default function CookieConsent() {
 
           {/* Manage Preferences (expandable) */}
           {expanded && (
-            <div className="mb-4 space-y-2 pl-8">
+            <div className="mb-3 mt-2 space-y-2 pl-6 md:pl-8">
               <label className="flex items-center gap-2 text-sm text-text-secondary">
                 <input type="checkbox" checked disabled className="accent-brand-blue" />
                 <span>Essential <span className="text-xs text-text-muted">(always on)</span></span>
@@ -88,10 +86,10 @@ export default function CookieConsent() {
           )}
 
           {/* Actions */}
-          <div className="flex items-center gap-2 pl-8 flex-wrap">
+          <div className="flex items-center gap-2 mt-2 md:mt-0 pl-6 md:pl-8 flex-wrap">
             <button
               onClick={handleAcceptAll}
-              className="px-4 py-2 bg-brand-blue text-white text-sm font-medium rounded-[8px] hover:bg-[#4a6dcc] transition-colors"
+              className="px-3 md:px-4 py-1.5 md:py-2 bg-brand-blue text-white text-xs md:text-sm font-medium rounded-[8px] hover:bg-[#4a6dcc] transition-colors"
             >
               Accept All
             </button>
@@ -103,16 +101,16 @@ export default function CookieConsent() {
                   setExpanded(true);
                 }
               }}
-              className="px-4 py-2 text-sm font-medium text-text-secondary border border-border-light rounded-[8px] hover:bg-bg-page transition-colors flex items-center gap-1"
+              className="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium text-text-secondary border border-border-light rounded-[8px] hover:bg-bg-page transition-colors flex items-center gap-1"
             >
-              {expanded ? 'Save Preferences' : 'Manage Preferences'}
+              {expanded ? 'Save' : 'Manage'}
               {!expanded && <ChevronDown className="w-3 h-3" />}
             </button>
             <button
               onClick={handleRejectNonEssential}
-              className="px-4 py-2 text-sm text-text-muted hover:text-text-secondary transition-colors"
+              className="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm text-text-muted hover:text-text-secondary transition-colors"
             >
-              Reject Non-Essential
+              Reject
             </button>
           </div>
         </div>

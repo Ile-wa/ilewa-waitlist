@@ -4,7 +4,7 @@ import {
   ArrowRight, Loader2, CheckCircle,
   Search, Shield, Wallet,
   Home, Users, TrendingUp,
-  Play,
+  Play, ChevronDown,
 } from "lucide-react";
 import PublicHeader from "./components/PublicHeader";
 import PublicFooter from "./components/PublicFooter";
@@ -204,46 +204,52 @@ export default function App() {
       <PublicHeader transparent minimal cta={{ label: "Become a General", href: "#generals" }} />
 
       {/* ── 1. Hero ──────────────────────────────────────────────── */}
-      <section className="relative min-h-screen w-full overflow-hidden max-md:min-h-0">
+      <section className="relative min-h-screen w-full overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=1080&fit=crop"
             alt="Modern Nigerian property"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover md:object-center object-[65%_center]"
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>
 
-        <div className="relative z-[5] max-w-7xl mx-auto px-4 sm:px-6 pt-40 sm:pt-56 pb-24 max-md:pt-32 max-md:pb-16">
+        <div className="relative z-[5] max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center text-center min-h-screen">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="max-w-2xl"
+            className="max-w-2xl flex flex-col items-center"
           >
-            <p className="text-xs font-medium text-white/40 uppercase tracking-[0.2em] mb-6">
-              Coming soon
-            </p>
-            <h1 className="text-4xl sm:text-[56px] font-bold text-white leading-[1.08] tracking-[-1.5px] mb-6 max-[480px]:text-[28px]">
+            <h1 className="text-[32px] sm:text-[56px] font-bold text-white leading-[1.08] tracking-[-1.5px] mb-3 sm:mb-5">
               Nigerian property,{" "}
               <br className="hidden sm:block" />
               without the wahala.
             </h1>
-            <p className="text-base sm:text-lg text-white/60 leading-relaxed max-w-md mb-12">
-              Verified listings. Agents who respond. Every payment receipted.
-              Ilewa is the property platform Lagos deserves.
+            <p className="text-sm sm:text-lg text-white/70 leading-relaxed max-w-md mb-6 sm:mb-10">
+              Verified listings. Agents who respond. Every naira receipted.
+              The property platform Lagos deserves is almost here.
             </p>
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => document.getElementById("generals")?.scrollIntoView({ behavior: "smooth" })}
-              className="inline-flex items-center gap-2.5 bg-white text-text-primary px-7 py-3.5 rounded-[8px] font-semibold text-sm transition-all"
+              className="inline-flex items-center gap-2 sm:gap-2.5 bg-white text-text-primary px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-[8px] font-semibold text-xs sm:text-sm transition-all"
             >
               Become a General
               <ArrowRight className="w-4 h-4" />
             </motion.button>
           </motion.div>
         </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[5]"
+        >
+          <ChevronDown className="w-5 h-5 text-white/50" />
+        </motion.div>
       </section>
 
       {/* ── 2. Value strip ────────────────────────────────────────── */}
@@ -252,14 +258,17 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-3">
             {[
               {
+                icon: Shield,
                 title: "Verified listings",
                 text: "Every property is checked before it goes live. Real photos, real prices, real availability.",
               },
               {
+                icon: Users,
                 title: "Direct communication",
                 text: "One tap to your agent. No middlemen, no forwarded numbers, no one disappearing after payment.",
               },
               {
+                icon: Wallet,
                 title: "Transparent payments",
                 text: "Inspection fees, rent, agreements \u2014 all on-platform. Every naira tracked, every transaction receipted.",
               },
@@ -270,7 +279,9 @@ export default function App() {
                   i < 2 ? "md:border-r md:border-border-light" : ""
                 } ${i === 1 ? "md:px-10 lg:px-14" : i === 2 ? "md:pl-10 lg:pl-14" : "md:pr-10 lg:pr-14"}`}
               >
-                <div className="w-full h-[2px] bg-brand-blue mb-6 max-w-[32px]" />
+                <div className="w-8 h-8 bg-brand-blue-bg rounded-full flex items-center justify-center mb-4">
+                  <item.icon className="w-4 h-4 text-brand-blue" />
+                </div>
                 <h3 className="text-sm font-semibold text-text-primary mb-2">{item.title}</h3>
                 <p className="text-sm text-text-secondary leading-relaxed">{item.text}</p>
               </div>
@@ -279,8 +290,11 @@ export default function App() {
         </div>
       </section>
 
+      {/* ── Accent divider ──────────────────────────────────────── */}
+      <div className="h-1 bg-gradient-to-r from-brand-blue via-brand-blue/60 to-transparent" />
+
       {/* ── 3. How it works ──────────────────────────────────────── */}
-      <section id="how-it-works" className="py-20 sm:py-28 bg-bg-page">
+      <section id="how-it-works" className="py-16 sm:py-20 bg-bg-page">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -289,7 +303,7 @@ export default function App() {
             transition={{ duration: 0.4 }}
             className="mb-14"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-text-primary tracking-tight mb-3">
+            <h2 className="text-2xl sm:text-3xl font-bold text-text-primary tracking-tight mb-4">
               How Ilewa works
             </h2>
             <p className="text-sm text-text-secondary max-w-md">
@@ -342,10 +356,10 @@ export default function App() {
                   transition={{ duration: 0.3, delay: index * 0.06 }}
                   className="bg-white border border-border-light rounded-[8px] p-6 sm:p-8"
                 >
-                  <span className="text-xs font-bold text-brand-blue tracking-widest uppercase mb-4 block">
+                  <span className="text-xs font-semibold text-brand-blue uppercase tracking-[0.2em] mb-4 block">
                     Step {step.step}
                   </span>
-                  <h3 className="text-base font-semibold text-text-primary mb-2">
+                  <h3 className="text-sm font-semibold text-text-primary mb-2">
                     {step.title}
                   </h3>
                   <p className="text-sm text-text-secondary leading-relaxed">
@@ -359,46 +373,47 @@ export default function App() {
       </section>
 
       {/* ── 4. Ilewa Generals ────────────────────────────────────── */}
-      <section id="generals" className="py-20 sm:py-28 bg-white">
+      <section id="generals" className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ y: 15 }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.4 }}
             >
               <p className="text-xs font-medium text-brand-blue uppercase tracking-[0.2em] mb-4">
                 Ilewa Generals
               </p>
               <h2 className="text-2xl sm:text-3xl font-bold text-text-primary tracking-tight mb-4">
-                Join the founding cohort
+                Lead the charge.
               </h2>
               <p className="text-sm text-text-secondary leading-relaxed mb-10 max-w-sm">
-                Generals are the early adopters who get first access,
-                test features before anyone else, and directly shape what we build.
+                The Generals are on the front lines of transforming Nigerian real estate.
+                First to test. First to shape. First to experience a marketplace where
+                certified agents, verified documents, and rated users set a new standard for trust.
               </p>
 
               <div className="space-y-8">
                 {[
                   {
                     num: "01",
-                    title: "First access",
-                    text: "Use the full platform while it\u2019s still invite-only.",
+                    title: "Frontline access",
+                    text: "Use the full platform while it\u2019s invite-only. Test it. Break it. Shape what ships.",
                   },
                   {
                     num: "02",
-                    title: "Shape what gets built",
-                    text: "Your feedback goes directly to the team writing the code.",
+                    title: "Direct line to HQ",
+                    text: "Your feedback goes straight to the team writing the code. Not a suggestion box \u2014 a war room.",
                   },
                   {
                     num: "03",
-                    title: "Priority at launch",
-                    text: "Skip the line when we open to everyone.",
+                    title: "Founding rank",
+                    text: "When Ilewa opens to everyone, Generals keep their status. First in. Never forgotten.",
                   },
                 ].map((item) => (
                   <div key={item.num} className="flex items-start gap-4">
-                    <span className="text-xs font-bold text-brand-blue tracking-widest mt-0.5 select-none">
+                    <span className="text-xs font-semibold text-brand-blue uppercase tracking-[0.2em] mt-0.5 select-none">
                       {item.num}
                     </span>
                     <div>
@@ -411,11 +426,11 @@ export default function App() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ y: 15 }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="lg:sticky lg:top-28"
+              className="lg:sticky lg:top-28 order-first lg:order-last"
             >
               <GeneralsForm defaultRole={activeTab === "agents" ? "agent" : "tenant"} />
             </motion.div>
@@ -424,13 +439,13 @@ export default function App() {
       </section>
 
       {/* ── 5. Ilewa Labs ────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28 bg-bg-page">
+      <section className="py-16 sm:py-20 bg-bg-page">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ y: 15 }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.4 }}
             >
               <p className="text-xs font-medium text-brand-blue uppercase tracking-[0.2em] mb-4">
@@ -458,9 +473,9 @@ export default function App() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              initial={{ y: 15 }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.4, delay: 0.1 }}
               className="space-y-8"
             >
@@ -482,7 +497,7 @@ export default function App() {
                 },
               ].map((item) => (
                 <div key={item.num} className="flex items-start gap-4">
-                  <span className="text-xs font-bold text-brand-blue tracking-widest mt-0.5 select-none">
+                  <span className="text-xs font-semibold text-brand-blue uppercase tracking-[0.2em] mt-0.5 select-none">
                     {item.num}
                   </span>
                   <div>
