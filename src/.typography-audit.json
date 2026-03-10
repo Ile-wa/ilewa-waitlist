@@ -1,0 +1,36 @@
+{
+  "font_sizes": [
+    12,
+    14,
+    16,
+    18,
+    20,
+    30,
+    56.0
+  ],
+  "font_weights": [
+    "500",
+    "600",
+    "700"
+  ],
+  "font_families": [
+    "inherit",
+    "\"Montserrat\", sans-serif"
+  ],
+  "distinct_styles": 14,
+  "scale_ratios": [
+    1.167,
+    1.143,
+    1.125,
+    1.111,
+    1.5,
+    1.867
+  ],
+  "closest_known_scale": "Perfect Fourth (1.333)",
+  "line_height_issues": [],
+  "issues": [
+    "TOO MANY DISTINCT TEXT STYLES: 14 found. Recommend 3-5 per screen, max ~8 across app.",
+    "INCONSISTENT TYPE SCALE: Ratios vary from 1.111 to 1.867. Consider using a systematic scale."
+  ],
+  "total_styles_analyzed": 52
+}

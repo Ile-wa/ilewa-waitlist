@@ -1,0 +1,45 @@
+{
+  "total_color_declarations": 61,
+  "unique_hex_colors": 9,
+  "unique_tailwind_colors": 4,
+  "hex_frequency": {
+    "#4a6dcc": 4,
+    "#5a7ddc": 1,
+    "#eaeefb": 1,
+    "#414141": 1,
+    "#7e7e7e": 1,
+    "#9c9c9c": 1,
+    "#cacaca": 1,
+    "#f9fafb": 1,
+    "#e4e4e4": 1
+  },
+  "tailwind_frequency": {
+    "white": 42,
+    "blue-50": 5,
+    "black": 1,
+    "gray-300": 1
+  },
+  "color_categories": {
+    "white": 43,
+    "teal": 5,
+    "blue": 5,
+    "dark-grey": 2,
+    "light-grey": 2,
+    "other": 1,
+    "mid-grey": 1,
+    "black": 1,
+    "gray": 1
+  },
+  "near_duplicates": [
+    {
+      "color_a": "#eaeefb",
+      "color_b": "#f9fafb",
+      "distance": 19.2,
+      "suggestion": "Consider consolidating #eaeefb and #f9fafb into a single token (distance: 19.2)"
+    }
+  ],
+  "semantic_issues": [],
+  "uses_design_tokens": true,
+  "uses_tailwind": true,
+  "uses_css_variables": false
+}

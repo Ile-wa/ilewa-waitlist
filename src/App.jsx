@@ -204,7 +204,7 @@ export default function App() {
       <PublicHeader transparent minimal cta={{ label: "Become a General", href: "#generals" }} />
 
       {/* ── 1. Hero ──────────────────────────────────────────────── */}
-      <section className="relative min-h-screen w-full overflow-hidden">
+      <section className="relative min-h-[100dvh] w-full overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=1080&fit=crop"
@@ -214,7 +214,7 @@ export default function App() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
 
-        <div className="relative z-[5] max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center text-center min-h-screen">
+        <div className="relative z-[5] max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center text-center min-h-[100dvh]">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -290,18 +290,15 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── Accent divider ──────────────────────────────────────── */}
-      <div className="h-1 bg-gradient-to-r from-brand-blue via-brand-blue/60 to-transparent" />
-
       {/* ── 3. How it works ──────────────────────────────────────── */}
-      <section id="how-it-works" className="py-16 sm:py-20 bg-bg-page">
+      <section id="how-it-works" className="py-10 sm:py-20 bg-bg-page">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="mb-14"
+            className="mb-8 sm:mb-14"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-text-primary tracking-tight mb-4">
               How Ilewa works
@@ -313,7 +310,7 @@ export default function App() {
           </motion.div>
 
           {/* Tab Switcher */}
-          <div className="flex mb-12">
+          <div className="flex mb-8 sm:mb-12">
             <div className="inline-flex bg-white rounded-[8px] p-1 border border-border-light">
               <button
                 onClick={() => setActiveTab("renters")}

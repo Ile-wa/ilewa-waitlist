@@ -1,0 +1,667 @@
+{
+  "analysis": {
+    "total_values": 248,
+    "on_scale": 194,
+    "off_scale": 54,
+    "consistency_score": 78.2,
+    "base_unit": 4,
+    "off_scale_values": [
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "mb",
+        "value": 6,
+        "raw": "mb-1.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "mb",
+        "value": 6,
+        "raw": "mb-1.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "mb",
+        "value": 6,
+        "raw": "mb-1.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "py",
+        "value": 10,
+        "raw": "py-2.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "py",
+        "value": 14,
+        "raw": "py-3.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 18,
+        "raw": "sm:text-lg",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "gap",
+        "value": 10,
+        "raw": "gap-2.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "py",
+        "value": 14,
+        "raw": "py-3.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 30,
+        "raw": "sm:text-3xl",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 30,
+        "raw": "sm:text-3xl",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "mt",
+        "value": 2,
+        "raw": "mt-0.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "mb",
+        "value": 2,
+        "raw": "mb-0.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 30,
+        "raw": "sm:text-3xl",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "gap",
+        "value": 10,
+        "raw": "gap-2.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "w",
+        "value": 14,
+        "raw": "w-3.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "h",
+        "value": 14,
+        "raw": "h-3.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "w",
+        "value": 14,
+        "raw": "w-3.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "h",
+        "value": 14,
+        "raw": "h-3.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "mt",
+        "value": 2,
+        "raw": "mt-0.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "mb",
+        "value": 2,
+        "raw": "mb-0.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/App.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "md:text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/CookieConsent.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/CookieConsent.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/CookieConsent.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/CookieConsent.jsx"
+      },
+      {
+        "property": "py",
+        "value": 6,
+        "raw": "py-1.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/CookieConsent.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "md:text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/CookieConsent.jsx"
+      },
+      {
+        "property": "py",
+        "value": 6,
+        "raw": "py-1.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/CookieConsent.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "md:text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/CookieConsent.jsx"
+      },
+      {
+        "property": "py",
+        "value": 6,
+        "raw": "py-1.5",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/CookieConsent.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "md:text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/CookieConsent.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/PublicFooter.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/PublicFooter.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/PublicFooter.jsx"
+      },
+      {
+        "property": "fontSize",
+        "value": 14,
+        "raw": "text-sm",
+        "source": "Tailwind",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/PublicFooter.jsx"
+      },
+      {
+        "property": "h",
+        "value": 22.0,
+        "raw": "h-[22px]",
+        "source": "Tailwind (arbitrary)",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/PublicHeader.jsx"
+      },
+      {
+        "property": "h",
+        "value": 26.0,
+        "raw": "sm:h-[26px]",
+        "source": "Tailwind (arbitrary)",
+        "file": "/Users/davidoritsejolomi/Desktop/GitHub/Products/IleWa/ile-wa/ilewa-waitlist/src/components/PublicHeader.jsx"
+      }
+    ],
+    "frequency": {
+      "16": 49,
+      "14": 35,
+      "12": 30,
+      "8.0": 28,
+      "32": 21,
+      "24": 19,
+      "20": 9,
+      "0": 7,
+      "6": 6,
+      "48": 6,
+      "80": 5,
+      "56": 4,
+      "64": 4,
+      "2": 4,
+      "28": 3,
+      "10": 3,
+      "40": 3,
+      "30": 3,
+      "4": 2,
+      "160": 1
+    },
+    "unique_values": [
+      0,
+      2,
+      4,
+      6,
+      8.0,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22.0,
+      24,
+      26.0,
+      28,
+      30,
+      32,
+      40,
+      48,
+      56,
+      64,
+      80,
+      96,
+      112,
+      160,
+      224
+    ],
+    "font_sizes_found": [
+      12,
+      14,
+      16,
+      18,
+      20,
+      24,
+      30,
+      32.0,
+      56.0
+    ],
+    "type_scale_ratios": [
+      1.167,
+      1.143,
+      1.125,
+      1.111,
+      1.2,
+      1.25,
+      1.067,
+      1.75
+    ]
+  },
+  "touch_issues": [
+    {
+      "class": "w-7",
+      "value": 28,
+      "warning": "w-7 (28px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-7",
+      "value": 28,
+      "warning": "h-7 (28px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-4",
+      "value": 16,
+      "warning": "w-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-4",
+      "value": 16,
+      "warning": "h-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-4",
+      "value": 16,
+      "warning": "w-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-4",
+      "value": 16,
+      "warning": "h-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-4",
+      "value": 16,
+      "warning": "w-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-4",
+      "value": 16,
+      "warning": "h-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-5",
+      "value": 20,
+      "warning": "w-5 (20px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-5",
+      "value": 20,
+      "warning": "h-5 (20px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-8",
+      "value": 32,
+      "warning": "w-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-8",
+      "value": 32,
+      "warning": "h-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-4",
+      "value": 16,
+      "warning": "w-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-4",
+      "value": 16,
+      "warning": "h-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-3.5",
+      "value": 14,
+      "warning": "w-3.5 (14px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-3.5",
+      "value": 14,
+      "warning": "h-3.5 (14px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-3.5",
+      "value": 14,
+      "warning": "w-3.5 (14px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-3.5",
+      "value": 14,
+      "warning": "h-3.5 (14px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-4",
+      "value": 16,
+      "warning": "w-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-4",
+      "value": 16,
+      "warning": "h-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-4",
+      "value": 16,
+      "warning": "w-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-4",
+      "value": 16,
+      "warning": "h-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-3",
+      "value": 12,
+      "warning": "w-3 (12px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-3",
+      "value": 12,
+      "warning": "h-3 (12px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-8",
+      "value": 32,
+      "warning": "h-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-8",
+      "value": 32,
+      "warning": "w-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-8",
+      "value": 32,
+      "warning": "h-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-4",
+      "value": 16,
+      "warning": "w-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-4",
+      "value": 16,
+      "warning": "h-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-8",
+      "value": 32,
+      "warning": "w-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-8",
+      "value": 32,
+      "warning": "h-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-4",
+      "value": 16,
+      "warning": "w-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-4",
+      "value": 16,
+      "warning": "h-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-8",
+      "value": 32,
+      "warning": "w-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-8",
+      "value": 32,
+      "warning": "h-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-4",
+      "value": 16,
+      "warning": "w-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-4",
+      "value": 16,
+      "warning": "h-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-8",
+      "value": 32,
+      "warning": "w-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-8",
+      "value": 32,
+      "warning": "h-8 (32px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "w-4",
+      "value": 16,
+      "warning": "w-4 (16px) is below the 44pt minimum touch target"
+    },
+    {
+      "class": "h-4",
+      "value": 16,
+      "warning": "h-4 (16px) is below the 44pt minimum touch target"
+    }
+  ]
+}
