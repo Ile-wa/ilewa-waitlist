@@ -21,6 +21,12 @@ const PublicFooter = ({ hideCta = false }) => {
             <p className="text-blue-50/60 text-xs">
               &copy; {year} Ilewa. All rights reserved.
             </p>
+            <a href="https://maps.google.com/?q=37+Aba+Johnson+Street,+Ikeja,+Lagos" target="_blank" rel="noopener noreferrer" className="text-blue-50/60 text-xs mt-1 hover:text-white transition-colors">
+              37 Aba Johnson Street, Ikeja, Lagos
+            </a>
+            <a href="tel:+2348038277316" className="text-blue-50/60 text-xs mt-1 hover:text-white transition-colors">
+              +2348038277316
+            </a>
           </div>
 
           <button
