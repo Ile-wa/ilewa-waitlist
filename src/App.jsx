@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  ArrowRight, Loader2, CheckCircle,
+  ArrowRight, Loader2,
   Search, Shield, Wallet,
   Home, Users, TrendingUp,
   Play, ChevronDown,
@@ -9,7 +9,10 @@ import {
 import PublicHeader from "./components/PublicHeader";
 import PublicFooter from "./components/PublicFooter";
 import CookieConsent from "./components/CookieConsent";
+import GeneralsSuccess from "./components/GeneralsSuccess";
+import Leaderboard from "./components/Leaderboard";
 import { submitWaitlistForm } from "./services/publicAnuService";
+import { captureReferralFromUrl, getStoredReferralCode } from "./utils/referral";
 
 // ─── Generals Signup Form ────────────────────────────────────────────────
 const GeneralsForm = ({ defaultRole }) => {
@@ -33,7 +36,10 @@ const GeneralsForm = ({ defaultRole }) => {
 
     setIsSubmitting(true);
     try {
-      const res = await submitWaitlistForm(formData);
+      const res = await submitWaitlistForm({
+        ...formData,
+        referred_by_code: getStoredReferralCode() || undefined,
+      });
       setResult(res);
     } catch (err) {
       const msg = err.response?.data;
@@ -50,26 +56,7 @@ const GeneralsForm = ({ defaultRole }) => {
   };
 
   if (result) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
-        className="bg-white rounded-[8px] border border-border-light p-8 text-center"
-      >
-        <div className="w-14 h-14 bg-brand-blue-bg rounded-full flex items-center justify-center mx-auto mb-5">
-          <CheckCircle className="w-7 h-7 text-brand-blue" />
-        </div>
-        <h3 className="text-xl font-bold text-text-primary mb-2">
-          {result.status === "already_registered" ? "You\u2019re already a General" : "Welcome, General"}
-        </h3>
-        <p className="text-sm text-text-secondary leading-relaxed">
-          {result.status === "already_registered"
-            ? "We already have your details. We\u2019ll reach out when it\u2019s time."
-            : "You\u2019re in. Check your email \u2014 we\u2019ll be in touch with next steps."}
-        </p>
-      </motion.div>
-    );
+    return <GeneralsSuccess result={result} />;
   }
 
   return (
@@ -198,6 +185,10 @@ const agentBenefits = [
 export default function App() {
   const [activeTab, setActiveTab] = useState("renters");
   const steps = activeTab === "renters" ? renterBenefits : agentBenefits;
+
+  useEffect(() => {
+    captureReferralFromUrl();
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -430,6 +421,7 @@ export default function App() {
               className="lg:sticky lg:top-28 order-first lg:order-last"
             >
               <GeneralsForm defaultRole={activeTab === "agents" ? "agent" : "tenant"} />
+              <Leaderboard />
             </motion.div>
           </div>
         </div>
