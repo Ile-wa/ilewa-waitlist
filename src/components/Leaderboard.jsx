@@ -59,8 +59,8 @@ export default function Leaderboard() {
               <span
                 className={
                   medal
-                    ? "w-10 text-3xl leading-none"
-                    : "w-10 text-xs font-semibold text-text-secondary tabular-nums"
+                    ? "inline-block w-10 text-2xl leading-none"
+                    : "inline-block w-10 text-xs font-semibold text-text-secondary tabular-nums"
                 }
               >
                 {medal || `#${row.position}`}
