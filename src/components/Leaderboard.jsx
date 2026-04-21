@@ -51,21 +51,28 @@ export default function Leaderboard() {
         <Trophy className="w-4 h-4 text-brand-blue" />
         <h3 className="text-sm font-semibold text-text-primary">Founding ranks</h3>
       </div>
-      <ul className="space-y-2.5">
+      <ul className="space-y-1.5">
         {rows.map((row, i) => {
           const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : null;
+          const initials = `${(row.first_name || "?")[0]}${row.last_initial || ""}`.toUpperCase();
           return (
-            <li key={`${row.first_name}-${row.position}`} className="flex items-center gap-3 text-sm">
+            <li
+              key={`${row.first_name}-${row.position}`}
+              className="flex items-center gap-4 py-2"
+            >
               <span
                 className={
                   medal
-                    ? "inline-block w-10 text-2xl leading-none"
-                    : "inline-block w-10 text-xs font-semibold text-text-secondary tabular-nums"
+                    ? "inline-block w-10 text-2xl leading-none text-center"
+                    : "inline-block w-10 text-sm font-semibold text-text-secondary tabular-nums text-center"
                 }
               >
                 {medal || `#${row.position}`}
               </span>
-              <span className="text-text-primary">
+              <span className="w-10 h-10 rounded-full bg-brand-blue-bg flex items-center justify-center text-sm font-semibold text-brand-blue shrink-0">
+                {initials}
+              </span>
+              <span className="text-base text-text-primary">
                 {row.first_name} {row.last_initial}.
               </span>
             </li>
