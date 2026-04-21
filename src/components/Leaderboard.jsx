@@ -52,23 +52,19 @@ export default function Leaderboard() {
         <h3 className="text-sm font-semibold text-text-primary">Founding ranks</h3>
       </div>
       <ul className="space-y-2.5">
-        {rows.map((row) => (
-          <li key={`${row.first_name}-${row.position}`} className="flex items-center justify-between text-sm">
-            <span className="flex items-center gap-3">
+        {rows.map((row, i) => {
+          const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : null;
+          return (
+            <li key={`${row.first_name}-${row.position}`} className="flex items-center gap-3 text-sm">
               <span className="w-8 text-xs font-semibold text-text-secondary tabular-nums">
-                #{row.position}
+                {medal || `#${row.position}`}
               </span>
               <span className="text-text-primary">
                 {row.first_name} {row.last_initial}.
               </span>
-            </span>
-            {row.referral_count > 0 && (
-              <span className="text-xs text-text-secondary tabular-nums">
-                {row.referral_count} {row.referral_count === 1 ? "invite" : "invites"}
-              </span>
-            )}
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     </motion.div>
   );
