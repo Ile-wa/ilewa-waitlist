@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle, Copy, Check, Share2 } from "lucide-react";
+import { CheckCircle, Copy, Check, MessageCircle, Twitter } from "lucide-react";
 
 const TIERS = [
   { count: 3, label: "Early access" },
   { count: 10, label: "General badge" },
-  { count: 25, label: "VIP General status" },
+  { count: 25, label: "VIP status" },
   { count: 50, label: "Private beta access" },
 ];
 
@@ -13,13 +13,20 @@ function nextTier(referralCount) {
   return TIERS.find((t) => referralCount < t.count) || null;
 }
 
+function buildShareUrl(referralCode, fallback) {
+  if (!referralCode) return fallback || "";
+  if (typeof window === "undefined") return fallback || "";
+  return `${window.location.origin}/?ref=${referralCode}`;
+}
+
 export default function GeneralsSuccess({ result }) {
   const [copied, setCopied] = useState(false);
 
   const isReturning = result.status === "already_registered";
+  const firstName = result.first_name || "General";
   const position = result.position;
   const referralCount = result.referral_count ?? 0;
-  const shareUrl = result.share_url;
+  const shareUrl = buildShareUrl(result.referral_code, result.share_url);
   const tier = nextTier(referralCount);
   const progress = tier ? Math.min(100, (referralCount / tier.count) * 100) : 100;
 
@@ -33,7 +40,7 @@ export default function GeneralsSuccess({ result }) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (_) {
-      // Fallback: select the input so the user can copy manually
+      // ignore
     }
   };
 
@@ -52,7 +59,7 @@ export default function GeneralsSuccess({ result }) {
           <CheckCircle className="w-5 h-5 text-brand-blue" />
         </div>
         <h3 className="text-lg font-bold text-text-primary">
-          {isReturning ? "Welcome back, General" : "Welcome, General"}
+          {isReturning ? `Welcome back, ${firstName}` : `You're in, ${firstName}`}
         </h3>
       </div>
 
@@ -96,7 +103,7 @@ export default function GeneralsSuccess({ result }) {
           <p className="text-xs font-semibold text-text-secondary uppercase tracking-[0.5px] mb-2">
             Your invite link
           </p>
-          <div className="flex items-stretch gap-2 mb-4">
+          <div className="flex items-stretch gap-2 mb-3">
             <input
               type="text"
               readOnly
@@ -107,7 +114,7 @@ export default function GeneralsSuccess({ result }) {
             <motion.button
               whileTap={{ scale: 0.96 }}
               onClick={handleCopy}
-              className="inline-flex items-center gap-1.5 px-3 bg-text-primary text-white rounded-[8px] text-xs font-semibold hover:opacity-90 transition-all"
+              className="inline-flex items-center gap-1.5 px-3.5 bg-brand-blue hover:bg-[#4a6dcc] text-white rounded-[8px] text-xs font-semibold transition-all"
               aria-label="Copy invite link"
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
@@ -120,19 +127,19 @@ export default function GeneralsSuccess({ result }) {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 bg-[#25D366] text-white rounded-[8px] text-xs font-semibold hover:opacity-90 transition-all"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 border border-border-light rounded-[8px] text-xs font-semibold text-text-primary hover:border-brand-blue hover:bg-brand-blue-bg hover:text-brand-blue transition-all"
             >
-              <Share2 className="w-3.5 h-3.5" />
-              WhatsApp
+              <MessageCircle className="w-3.5 h-3.5" />
+              Share on WhatsApp
             </a>
             <a
               href={twitterHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 bg-black text-white rounded-[8px] text-xs font-semibold hover:opacity-90 transition-all"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 border border-border-light rounded-[8px] text-xs font-semibold text-text-primary hover:border-brand-blue hover:bg-brand-blue-bg hover:text-brand-blue transition-all"
             >
-              <Share2 className="w-3.5 h-3.5" />
-              Twitter
+              <Twitter className="w-3.5 h-3.5" />
+              Share on Twitter
             </a>
           </div>
         </>
@@ -141,7 +148,7 @@ export default function GeneralsSuccess({ result }) {
       <p className="text-xs text-text-secondary leading-relaxed mt-5">
         {isReturning
           ? "You were already on the list — your rank and link are unchanged."
-          : "We'll email you when it's time. Share your link now to move up."}
+          : "We'll email you when it's time. Share your link now to move up the ranks."}
       </p>
     </motion.div>
   );

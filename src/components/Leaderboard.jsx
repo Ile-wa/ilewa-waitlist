@@ -30,10 +30,10 @@ export default function Leaderboard() {
       <div className="mt-8 bg-white border border-border-light rounded-[8px] p-5 sm:p-6">
         <div className="flex items-center gap-2 mb-2">
           <Trophy className="w-4 h-4 text-brand-blue" />
-          <h3 className="text-sm font-semibold text-text-primary">Top Ilewa Generals</h3>
+          <h3 className="text-sm font-semibold text-text-primary">Founding ranks</h3>
         </div>
         <p className="text-sm text-text-secondary leading-relaxed">
-          No one has referred a friend yet. Be the first.
+          Be the first. Every signup lands here in order.
         </p>
       </div>
     );
@@ -49,20 +49,24 @@ export default function Leaderboard() {
     >
       <div className="flex items-center gap-2 mb-4">
         <Trophy className="w-4 h-4 text-brand-blue" />
-        <h3 className="text-sm font-semibold text-text-primary">Top Ilewa Generals</h3>
+        <h3 className="text-sm font-semibold text-text-primary">Founding ranks</h3>
       </div>
       <ul className="space-y-2.5">
-        {rows.map((row, i) => (
+        {rows.map((row) => (
           <li key={`${row.first_name}-${row.position}`} className="flex items-center justify-between text-sm">
             <span className="flex items-center gap-3">
-              <span className="w-5 text-xs font-semibold text-text-secondary tabular-nums">{i + 1}.</span>
+              <span className="w-8 text-xs font-semibold text-text-secondary tabular-nums">
+                #{row.position}
+              </span>
               <span className="text-text-primary">
                 {row.first_name} {row.last_initial}.
               </span>
             </span>
-            <span className="text-xs text-text-secondary tabular-nums">
-              {row.referral_count} {row.referral_count === 1 ? "invite" : "invites"}
-            </span>
+            {row.referral_count > 0 && (
+              <span className="text-xs text-text-secondary tabular-nums">
+                {row.referral_count} {row.referral_count === 1 ? "invite" : "invites"}
+              </span>
+            )}
           </li>
         ))}
       </ul>
