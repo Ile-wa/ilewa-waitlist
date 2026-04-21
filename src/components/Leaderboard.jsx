@@ -56,7 +56,13 @@ export default function Leaderboard() {
           const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : null;
           return (
             <li key={`${row.first_name}-${row.position}`} className="flex items-center gap-3 text-sm">
-              <span className="w-8 text-xs font-semibold text-text-secondary tabular-nums">
+              <span
+                className={
+                  medal
+                    ? "w-8 text-xl leading-none"
+                    : "w-8 text-xs font-semibold text-text-secondary tabular-nums"
+                }
+              >
                 {medal || `#${row.position}`}
               </span>
               <span className="text-text-primary">
