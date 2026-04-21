@@ -5,21 +5,14 @@
 
 import axios from 'axios';
 
-// Resolution order:
-//   1. VITE_API_URL at build time wins (canonical way to configure).
-//   2. Otherwise, if we're running on localhost, use the local backend.
-//   3. Otherwise, fall back to the production Render API so a deploy
-//      without VITE_API_URL still works instead of hitting localhost.
-function resolveApiUrl() {
-  const envUrl = import.meta.env.VITE_API_URL;
-  if (envUrl) return envUrl;
-  if (typeof window !== 'undefined' && /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)) {
-    return 'http://localhost:8001';
-  }
-  return 'https://ilewa-api.onrender.com';
+// VITE_API_URL must be set at build time. No fallbacks — a missing value
+// should fail loudly rather than silently hit the wrong backend.
+const API_URL = import.meta.env.VITE_API_URL;
+if (!API_URL) {
+  throw new Error(
+    'VITE_API_URL is not set. Configure it in your environment before building.'
+  );
 }
-
-const API_URL = resolveApiUrl();
 
 const publicApi = axios.create({
   baseURL: `${API_URL}/api`,
