@@ -60,20 +60,20 @@ export default function Leaderboard() {
               key={`${row.first_name}-${row.position}`}
               className="flex items-center gap-4 py-2"
             >
-              <span
-                className={
-                  medal
-                    ? "inline-block w-10 text-2xl leading-none text-center"
-                    : "inline-block w-10 text-sm font-semibold text-text-secondary tabular-nums text-center"
-                }
-              >
-                {medal || `#${row.position}`}
-              </span>
               <span className="w-10 h-10 rounded-full bg-brand-blue-bg flex items-center justify-center text-sm font-semibold text-brand-blue shrink-0">
                 {initials}
               </span>
               <span className="text-base text-text-primary">
                 {row.first_name} {row.last_initial}.
+              </span>
+              <span
+                className={
+                  medal
+                    ? "ml-auto text-2xl leading-none"
+                    : "ml-auto text-sm font-semibold text-text-secondary tabular-nums"
+                }
+              >
+                {medal || `#${row.position}`}
               </span>
             </li>
           );
