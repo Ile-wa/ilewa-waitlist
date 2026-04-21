@@ -7,12 +7,17 @@ import axios from 'axios';
 
 // VITE_API_URL must be set at build time. No fallbacks — a missing value
 // should fail loudly rather than silently hit the wrong backend.
-const API_URL = import.meta.env.VITE_API_URL;
-if (!API_URL) {
+const RAW_API_URL = import.meta.env.VITE_API_URL;
+if (!RAW_API_URL) {
   throw new Error(
     'VITE_API_URL is not set. Configure it in your environment before building.'
   );
 }
+
+// Normalise so both "https://host.example" and "https://host.example/api"
+// produce the same baseURL. Prevents the "/api/api/..." double-prefix bug
+// when someone sets the env var with /api already included.
+const API_URL = RAW_API_URL.replace(/\/+$/, '').replace(/\/api$/, '');
 
 const publicApi = axios.create({
   baseURL: `${API_URL}/api`,
