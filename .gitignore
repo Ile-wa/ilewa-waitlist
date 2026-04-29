@@ -19,3 +19,7 @@ dist/
 # Logs
 *.log
 npm-debug.log*
+
+# Playwright generated artifacts
+screenshots/
+test-results/
